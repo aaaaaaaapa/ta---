@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+{% load static %}
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabel</title>
 
-    <link rel="stylesheet" href="../../../static/style/main.css">
-    <link rel="stylesheet" href="../../../static/style/tabel.css">
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style/tabel.css' %}">
 
 </head>
 <body>
@@ -37,6 +39,7 @@
                 <div class="main-wrapper">
 
                     <div class="user-info">
+
                         <ul class="user-info-list">
                             <li class="user-info-item">
                                 ФИО: Фамилия Имя Отчество
@@ -51,6 +54,7 @@
                                 Родительское подразделение: Родительское подразделение
                             </li>
                         </ul>
+
                     </div>
 
                     <div class="tabel-table">
@@ -185,6 +189,22 @@
 
                         </table>
 
+                    </div>
+
+                    <div class="decoding">
+                        <p class="decod-head">Расшифровка значений:</p>
+                        <p class="decod-text">Р - рабочий день</p>
+                        <p class="decod-text">Н - неявка на работу</p>
+                        <p class="decod-text">НП - простой</p>
+                        <p class="decod-text">Б - больничный</p>
+                        <p class="decod-text">О - отпуск</p>
+                        <p class="decod-text">Д - декретный отпуск</p>
+                        <p class="decod-text">Т - отпуск по уходу за ребенком</p>
+                        <p class="decod-text">А - отпуск за свой счёт</p>
+                        <p class="decod-text">П - прогул</p>
+                        <p class="decod-text">Г - отпуск с сохранением з/п (по соц. политике)</p>
+                        <p class="decod-text">У - учебный отпуск</p>
+                        <p class="decod-text">И - доп. выходной для ухода за ребёнком-инвалидом </p>
                     </div>
 
                 </div>
