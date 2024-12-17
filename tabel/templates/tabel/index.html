@@ -42,16 +42,16 @@
 
                         <ul class="user-info-list">
                             <li class="user-info-item">
-                                ФИО: Фамилия Имя Отчество
+                                ФИО: {{ user.fio }}
                             </li>
                             <li class="user-info-item">
-                                Должность: Должность
+                                Должность: {{ user.rang }}
                             </li>
                             <li class="user-info-item">
-                                Подразделение: Подразделение
+                                Подразделение: {{ user.depart }}
                             </li>
                             <li class="user-info-item">
-                                Родительское подразделение: Родительское подразделение
+                                Родительское подразделение: {{ user.depart.parent }}
                             </li>
                         </ul>
 
@@ -90,102 +90,30 @@
                             </thead>
 
                             <tbody>
-                                <tr>
-                                    <td colspan="1">Фамилия Имя Отчество</td>
-                                    <td>Должность 1</td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                </tr>
-                                <tr>
-                                    <td>Фамилия Имя Отчество</td>
-                                    <td>Должность 2</td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                </tr>
-                                <tr>
-                                    <td>Фамилия Имя Отчество</td>
-                                    <td>Должность 3</td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                </tr>
-                                <tr>
-                                    <td>Фамилия Имя Отчество</td>
-                                    <td>Должность 3</td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                </tr>
-                                <tr>
-                                    <td>Фамилия Имя Отчество</td>
-                                    <td>Должность 3</td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                    <td><input value="Р" class="tabel-input"></td>
-                                </tr>
-                              </tbody>
+
+                                {% for child in children %}
+                                    <tr>
+                                        <td>{{ child.fio }}</td>
+                                        <td>{{ child.rang }}</td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                        <td><input value="Р" class="tabel-input"></td>
+                                    </tr>
+                                {% endfor %}
+
+                            </tbody>
 
                         </table>
 

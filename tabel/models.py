@@ -49,6 +49,10 @@ class Employee(models.Model):
     
     fio = models.CharField(max_length=250, blank=False, null=False, verbose_name='ФИО')
     
+    rang = models.ForeignKey(to=Rang, on_delete=models.CASCADE, 
+                               blank=False, null=False, 
+                               verbose_name='Должность')
+    
     depart = models.ForeignKey(to=Depart, on_delete=models.CASCADE, 
                                blank=False, null=False, 
                                verbose_name='Департамент')
