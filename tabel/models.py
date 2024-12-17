@@ -2,6 +2,24 @@ from django.db import models
 from datetime import timedelta
 from django.utils.timezone import now
 
+class Period(models.Model):
+
+    name = models.CharField(max_length=25, unique=True, 
+                            blank=False, null=False, 
+                            verbose_name='Период')
+    
+    start_date = models.DateField(blank=False, null=False, verbose_name='Дата начала')
+    end_date = models.DateField(blank=False, null=False, verbose_name='Дата окончания')
+
+    class Meta:
+        db_table = 'period'
+        verbose_name = 'Период'
+        verbose_name_plural = 'Периоды'
+
+    def __str__(self):
+        return self.name
+    
+
 class Rang(models.Model):
 
     name = models.CharField(max_length=50, unique=True, 
@@ -122,13 +140,15 @@ class Tabel(models.Model):
                             blank=False, null=False, 
                             verbose_name='Сотрудник')
     
+    period = models.ForeignKey(to=Period, on_delete=models.CASCADE, verbose_name='Период')
+    
     date = models.DateField(default=now, verbose_name='Дата')
     type = models.CharField(max_length=6, blank=False, null=False, verbose_name='Буквенное обозначение')
 
     class Meta:
         db_table = 'tabel'
         verbose_name = 'Табель'
-        verbose_name_plural = 'Табели'
+        verbose_name_plural = 'Табель'
 
     def __str__(self):
         return f'{self.employee} {self.date} {self.type}'
