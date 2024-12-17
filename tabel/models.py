@@ -1,5 +1,6 @@
 from django.db import models
-from datetime import date, timedelta
+from datetime import timedelta
+from django.utils.timezone import now
 
 class Rang(models.Model):
 
@@ -68,11 +69,11 @@ class EmployeeAccounting(models.Model):
                             blank=False, null=False, 
                             verbose_name='Сотрудник')
     
-    employment_date = models.DateField(default=date.today(), verbose_name='Дата приема')
+    employment_date = models.DateField(default=now, verbose_name='Дата приема')
     dismissal_date = models.DateField(blank=True, null=True, verbose_name='Дата увольнения')
 
     def dismiss(self):
-        self.dismissal_date = date.today()
+        self.dismissal_date = now().date()
         self.save()
 
     class Meta:
@@ -91,7 +92,7 @@ class Vacation(models.Model):
                             blank=False, null=False, 
                             verbose_name='Сотрудник')
     
-    start_date = models.DateField(default=date.today(), verbose_name='Дата начала')
+    start_date = models.DateField(default=now, verbose_name='Дата начала')
     end_date = models.DateField(blank=True, null=True, verbose_name='Дата окончания')
 
     def calculate_vacation_end(self, days):
@@ -114,7 +115,7 @@ class Tabel(models.Model):
                             blank=False, null=False, 
                             verbose_name='Сотрудник')
     
-    date = models.DateField(default=date.today(), verbose_name='Дата')
+    date = models.DateField(default=now, verbose_name='Дата')
     type = models.CharField(max_length=6, blank=False, null=False, verbose_name='Буквенное обозначение')
 
     class Meta:
