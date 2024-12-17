@@ -7,6 +7,9 @@ class Rang(models.Model):
     name = models.CharField(max_length=50, unique=True, 
                             blank=False, null=False, 
                             verbose_name='Должность')
+    
+    is_admin = models.BooleanField(default=False,
+                            verbose_name='Права админа')
 
     class Meta:
         db_table = 'rang'
